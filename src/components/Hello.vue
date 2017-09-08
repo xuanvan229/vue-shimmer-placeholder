@@ -1,28 +1,25 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+  <div class="content">
+      <div class="image">
+        <placeholder></placeholder>
+      </div>
+      <div class="text">
+                <placeholder></placeholder>
+      </div>
+      <div class="text">
+                <placeholder></placeholder>
+      </div>
   </div>
 </template>
 
 <script>
+import placeholder from './placeholder'
+
 export default {
   name: 'hello',
+  components: {
+    placeholder
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -30,6 +27,7 @@ export default {
   }
 }
 </script>
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
@@ -49,5 +47,39 @@ li {
 
 a {
   color: #42b983;
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+.image{
+  width: 100px;
+  height:100px;
+}
+.text{
+  max-width: 100%;
+  height: 20px;
+  margin-bottom: 10px;
+}
+.content{
+  margin: 0 auto;
+  max-width: 500px;
+  border: 1px solid pink;
+}
+.animated-background {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    position: relative;
 }
 </style>
