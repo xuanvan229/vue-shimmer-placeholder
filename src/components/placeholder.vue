@@ -1,6 +1,6 @@
 <template>
 	<div class="hello">
-	    <div class="animated-background">
+	    <div class="animated-background" v-bind:class="message">
 	    </div>
     </div>
 </template>
@@ -20,7 +20,6 @@ export default {
 <style>
 	.hello {
     background: #fff;
-    padding: 12px;
 
     margin: 0 auto;
 }
@@ -42,7 +41,6 @@ export default {
     background: #f6f7f8;
     background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
     background-size: 800px 104px;
-    height: 10px;
     position: relative;
 }
 </style>

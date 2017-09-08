@@ -1,13 +1,13 @@
 <template>
   <div class="content">
       <div class="image">
-        <placeholder></placeholder>
+        <placeholder message="image_w" data-v-f3f3eg9></placeholder>
       </div>
-      <div class="text">
-                <placeholder></placeholder>
+      <div>
+                <placeholder message="text"></placeholder>
       </div>
-      <div class="text">
-                <placeholder></placeholder>
+      <div>
+                <placeholder message="text"></placeholder>
       </div>
   </div>
 </template>
@@ -30,7 +30,7 @@ export default {
 
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 h1, h2 {
   font-weight: normal;
 }
@@ -61,10 +61,15 @@ a {
   width: 100px;
   height:100px;
 }
+.image_w{
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
 .text{
   max-width: 100%;
   height: 20px;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 .content{
   margin: 0 auto;
